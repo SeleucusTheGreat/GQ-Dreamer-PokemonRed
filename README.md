@@ -4,11 +4,12 @@
 
 **A model-based reinforcement-learning agent that learns to play Pokémon Red inside its own learned world model, with an explicit memory of the story events it has completed.**
 
-<img src="assets/mosaic.png" alt="Pewter Gym, Team Rocket, Mt. Moon and the rival battle in an episode played by GQ-Dreamer" width="100%">
+<img src="assets/mosaic.png" alt="Twelve moments of an episode played by GQ-Dreamer, from Pallet Town to Route 25" width="100%">
 
-*Moments from one of the last training episodes (110,000 agent steps, 40 events completed): the agent wins the
-Boulder Badge from Brock, defeats Team Rocket and reaches the fossils in Mt. Moon, then faces its rival in Cerulean
-City. The frames were re-rendered at full resolution by replaying the episode's recorded actions in the emulator.*
+*One of the last training episodes (110,000 agent steps, 40 events completed), from Pallet Town to Route 25: the
+agent wins the Boulder Badge, defeats Team Rocket and takes the Helix Fossil in Mt. Moon, battles its rival in
+Cerulean City and crosses Nugget Bridge. The frames were re-rendered at full resolution by replaying the
+episode's recorded actions in the emulator.*
 
 </div>
 
