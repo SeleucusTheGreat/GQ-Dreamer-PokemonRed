@@ -4,11 +4,10 @@
 
 **A model-based reinforcement-learning agent that learns to play Pokémon Red inside its own learned world model, with an explicit memory of the story events it has completed.**
 
-<img src="assets/gameplay.gif" alt="GQ-Dreamer playing Pokémon Red" width="480">
+<img src="assets/mosaic.png" alt="Screens from an episode played by GQ-Dreamer" width="100%">
 
 *The final model (`model/model.pt`), first 1,800 steps of an episode: it leaves Red's house, crosses Pallet Town,
-Route 1, Viridian City and Route 2, and beats its first trainer in Viridian Forest. Sampled actions, no human input;
-sped up.*
+Route 1 and Viridian City, enters Viridian Forest and beats its first trainer there. Sampled actions, no human input.*
 
 </div>
 
@@ -16,7 +15,7 @@ sped up.*
 
 ## Overview
 
-GQ-Dreamer (**GroundQuery-Dreamer**) is a Dreamer-style agent. Pokémon Red is a much longer game than an arcade level:
+GQ-Dreamer (**GroundQuery-Dreamer**) is a new world-model agent of the Dreamer family. Pokémon Red is a much longer game than an arcade level:
 progress depends on events far in the past (talking to Oak, delivering the parcel, beating a trainer), which a
 world model has to remember. GQ-Dreamer handles this with three components:
 
@@ -137,10 +136,12 @@ main.ipynb             training
 run.ipynb              play the trained model
 ```
 
-## Acknowledgements
+## Related work
 
-GQ-Dreamer builds on [DreamerV3](https://arxiv.org/abs/2301.04104) (Hafner et al.), transformer world models such as
-[TWM](https://arxiv.org/abs/2303.07109) and [STORM](https://arxiv.org/abs/2310.09615), HL-Gauss value targets
-([Farebrother et al., 2024](https://arxiv.org/abs/2403.03950)), the [PyBoy](https://github.com/Baekalfen/PyBoy) emulator
-and the RAM map of the [pret/pokered](https://github.com/pret/pokered) disassembly. Pokémon Red is © Nintendo /
-Game Freak; this repository contains no game data.
+GQ-Dreamer is a new model of the Dreamer family of world-model agents, alongside
+[DreamerV3](https://arxiv.org/abs/2301.04104) and transformer world models such as
+[TWM](https://arxiv.org/abs/2303.07109), [IRIS](https://arxiv.org/abs/2209.00588) and
+[STORM](https://arxiv.org/abs/2310.09615): it learns a model of the environment and trains its policy in imagination.
+It uses HL-Gauss value targets ([Farebrother et al., 2024](https://arxiv.org/abs/2403.03950)), the
+[PyBoy](https://github.com/Baekalfen/PyBoy) emulator and the RAM map of the [pret/pokered](https://github.com/pret/pokered)
+disassembly. Pokémon Red is © Nintendo / Game Freak; this repository contains no game data.
